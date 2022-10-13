@@ -94,6 +94,16 @@
             android:dropDownVerticalOffset="65dp"
             />
     </LinearLayout>
+    <Button
+        android:id="@+id/cari"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/elemenY"
+        android:layout_marginLeft="@dimen/elemenX"
+        android:layout_marginRight="@dimen/elemenX"
+        android:text="cari"
+        android:textSize="20sp"
+        />
 
 
 

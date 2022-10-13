@@ -3,10 +3,12 @@ package com.example.jawaban_uts_revandra;
 import java.util.Date;
 
 public class Berita {
+    public static final int[] kumpulanGambar = {R.drawable.Kanjuruhan};
     String judul;
     String content;
     int min_age;
     Date rilis;
+    int picture;
     String category;
 
     public String getContent() {
@@ -41,11 +43,11 @@ public class Berita {
         this.category = category;
     }
 
-    public String getPicture() {
+    public int getPicture() {
         return picture;
     }
 
-    public void setPicture(String picture) {
+    public void setPicture(int picture) {
         this.picture = picture;
     }
 
@@ -57,13 +59,13 @@ public class Berita {
         this.judul = judul;
     }
 
-    String picture;
+
     public Berita(String judul,
             String content,
             int min_age,
             Date rilis,
             String category,
-            String picture)
+            int picture)
     {
         this.judul = judul;
         this.content = content;

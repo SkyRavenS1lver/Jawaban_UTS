@@ -6,8 +6,13 @@
         <entry key="..\:/AndroidProject/Jawaban_UTS_Revandra/app/src/main/res/drawable-v24/bg_et.xml" value="0.2205" />
         <entry key="..\:/AndroidProject/Jawaban_UTS_Revandra/app/src/main/res/drawable-v24/bg_popup.xml" value="0.2205" />
         <entry key="..\:/AndroidProject/Jawaban_UTS_Revandra/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2205" />
-        <entry key="..\:/AndroidProject/Jawaban_UTS_Revandra/app/src/main/res/layout/activity_cari_berita.xml" value="0.33" />
+        <entry key="..\:/AndroidProject/Jawaban_UTS_Revandra/app/src/main/res/layout/activity_cari_berita.xml" value="0.25" />
+        <entry key="..\:/AndroidProject/Jawaban_UTS_Revandra/app/src/main/res/layout/activity_detail_berita.xml" value="0.14" />
         <entry key="..\:/AndroidProject/Jawaban_UTS_Revandra/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/AndroidProject/Jawaban_UTS_Revandra/app/src/main/res/layout/activity_tampil_berita.xml" value="0.18802083333333333" />
+        <entry key="..\:/AndroidProject/Jawaban_UTS_Revandra/app/src/main/res/layout/dropitem.xml" value="0.358695652173913" />
+        <entry key="..\:/AndroidProject/Jawaban_UTS_Revandra/app/src/main/res/layout/item.xml" value="0.33" />
+        <entry key="..\:/AndroidProject/Jawaban_UTS_Revandra/app/src/main/res/layout/itemrvberita.xml" value="0.358695652173913" />
       </map>
     </option>
   </component>

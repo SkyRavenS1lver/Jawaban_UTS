@@ -12,11 +12,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     EditText et1,et2;
     Button btn1;
     String username, password;
+    public static ArrayList<Berita> Kumpulan_berita;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,13 +29,15 @@ public class MainActivity extends AppCompatActivity {
         et2 = findViewById(R.id.et2);
         btn1 = findViewById(R.id.btn1);
 
+
+
     }
 
     public void login(View view){
         String username = "pakjoko";
         String password = "yangpentingcuan";
         if(et1.getText().toString().equals(username) && et2.getText().toString().equals(password)){
-            Toast.makeText(MainActivity.this, et1.getText(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "Login Sukses", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(MainActivity.this, CariBerita.class);
             startActivity(intent);
         } else {
