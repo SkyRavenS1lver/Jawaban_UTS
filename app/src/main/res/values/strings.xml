@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Berita</string>
+    <string name="formatter" formatted="true">%02d</string>
+    <string-array name="statuses">
+        <item>Anak-anak</item>
+        <item>Sport</item>
+        <item>Politics</item>
+        <item>Entertainment</item>
+        <item>Crime</item>
+    </string-array>
+</resources>

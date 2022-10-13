@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CariBerita"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:text="Masukkan Berita yang diinginkan"
+        android:textAlignment="center"
+        android:textSize="25sp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/elemenY"
+        android:layout_marginLeft="@dimen/elemenX"
+        android:layout_marginRight="@dimen/elemenX"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:background="@android:color/transparent"
+            android:text="Masukkan Tanggal Lahir"
+            android:paddingStart="@dimen/padText"
+            android:paddingTop="@dimen/padText"
+            android:paddingBottom="@dimen/padText"
+            android:textSize="20sp"
+            tools:ignore="Deprecated,TextFields" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/elemenY"
+        android:layout_marginLeft="@dimen/elemenX"
+        android:layout_marginRight="@dimen/elemenX"
+        android:background="@drawable/bg_et"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/Date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:hint="Tanggal Lahir"
+            android:background="@android:color/transparent"
+            android:inputType="none"
+            android:paddingStart="@dimen/padText"
+            android:paddingTop="@dimen/padText"
+            android:paddingBottom="@dimen/padText"
+            android:textSize="20sp"
+            tools:ignore="Deprecated,TextFields" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/elemenY"
+        android:layout_marginLeft="@dimen/elemenX"
+        android:layout_marginRight="@dimen/elemenX"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="Pilih preferensi Berita"
+            android:paddingStart="@dimen/padText"
+            android:paddingTop="@dimen/padText"
+            android:paddingBottom="@dimen/padText"
+            android:textSize="20sp"
+            tools:ignore="Deprecated,TextFields" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/elemenY"
+        android:layout_marginLeft="@dimen/elemenX"
+        android:layout_marginRight="@dimen/elemenX"
+        android:background="@drawable/bg_et"
+        android:orientation="vertical">
+        <Spinner
+            android:id="@+id/Status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/padText"
+            android:paddingTop="@dimen/padText"
+            android:paddingBottom="@dimen/padText"
+            android:spinnerMode="dropdown"
+            android:popupBackground="@drawable/bg_popup"
+            android:dropDownVerticalOffset="65dp"
+            />
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
