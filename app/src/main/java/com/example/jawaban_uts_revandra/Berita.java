@@ -3,7 +3,7 @@ package com.example.jawaban_uts_revandra;
 import java.util.Date;
 
 public class Berita {
-    public static final int[] kumpulanGambar = {R.drawable.Kanjuruhan};
+    public static final int[] kumpulanGambar = {R.drawable.kanjuruhan};
     String judul;
     String content;
     int min_age;
