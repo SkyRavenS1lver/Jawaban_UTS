@@ -5,7 +5,6 @@ import java.util.Date;
 public class Berita {
     String judul;
     String content;
-
     String rilis;
     int picture;
     String category;

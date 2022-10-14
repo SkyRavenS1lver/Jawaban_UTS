@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
     EditText et1,et2;
     Button btn1;
     String username, password;
-    public static ArrayList<Berita> Kumpulan_berita;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

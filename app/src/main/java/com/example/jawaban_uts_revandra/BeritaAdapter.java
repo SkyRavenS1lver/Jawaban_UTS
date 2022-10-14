@@ -42,7 +42,7 @@ public class BeritaAdapter extends RecyclerView.Adapter<BeritaAdapter.ViewHolder
     public void onBindViewHolder(@NonNull final BeritaAdapter.ViewHolder holder, final int position) {
         final Berita berita = value.get(position);
         holder.txtName.setText(berita.judul);
-        holder.txtTanggal.setText(berita.rilis.toString());
+        holder.txtTanggal.setText(berita.rilis);
         Drawable bg = ContextCompat.getDrawable(inflater.getContext(), R.drawable.bg_rv);
         Drawable bg2 = ContextCompat.getDrawable(inflater.getContext(), R.drawable.bgrv2);
         Drawable bg3 = ContextCompat.getDrawable(inflater.getContext(), R.drawable.bgrv3);
