@@ -1,8 +1,10 @@
 package com.example.jawaban_uts_revandra;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -28,6 +30,7 @@ public class CariBerita extends AppCompatActivity {
     public static int umur;
     public static String preferensi;
     LinearLayout UMR;
+    Button logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +42,29 @@ public class CariBerita extends AppCompatActivity {
         spinnerText = findViewById(R.id.Status);
         tanggal = findViewById(R.id.Date);
         tanggal.setKeyListener(null);
+        logout = findViewById(R.id.Logout);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog alertDialog = new AlertDialog.Builder(CariBerita.this).create();
+//            alertDialog.setTitle("Alert");
+                alertDialog.setMessage("Apakah Ingin keluar?");
+                alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Iya",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                Intent intent = new Intent(CariBerita.this, MainActivity.class);
+                                startActivity(intent);
+                            }
+                        });
+                alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "Tidak", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        return;
+                    }
+                });
+                alertDialog.show();
+            }
+        });
 
         //Button Listener
         cari.setOnClickListener(new View.OnClickListener() {
@@ -96,6 +122,7 @@ public class CariBerita extends AppCompatActivity {
     public void cari_berita(){
 //        String preferensi = spinnerText.getSelectedItem().toString();
         preferensi = spinnerText.getSelectedItem().toString();
+
         Intent tampilkan = new Intent(CariBerita.this, tampil_Berita.class);
 //        tampilkan.putExtra("Umur",umur);
 //        tampilkan.putExtra("Preferensi",preferensi);

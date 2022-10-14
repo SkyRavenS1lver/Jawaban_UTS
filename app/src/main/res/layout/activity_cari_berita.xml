@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bgphoto"
     tools:context=".CariBerita"
     android:orientation="vertical">
     <LinearLayout
@@ -18,6 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Cari Berita"
+        android:textColor="@color/purple_500"
         android:textAlignment="center"
         android:layout_marginTop="50dp"
         android:textSize="40sp"/>
@@ -33,6 +35,7 @@
             android:editable="false"
             android:background="@android:color/transparent"
             android:text="Tanggal Lahir:"
+            android:textColor="@color/purple_500"
             android:textSize="20sp"
             tools:ignore="Deprecated,TextFields"
             android:layout_weight="1"/>
@@ -43,6 +46,7 @@
             android:layout_weight="1"
             android:orientation="vertical">
             <EditText
+                android:textColor="@color/purple_500"
                 android:id="@+id/Date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -70,6 +74,7 @@
                 android:editable="false"
                 android:background="@android:color/transparent"
                 android:text="Umur Anda:"
+                android:textColor="@color/purple_500"
                 android:textSize="20sp"
                 tools:ignore="Deprecated,TextFields"
                 android:layout_weight="1"/>
@@ -80,6 +85,7 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
                 <TextView
+                    android:textColor="@color/purple_500"
                     android:id="@+id/Umur"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -105,6 +111,7 @@
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             android:text="Pilih preferensi Berita:"
+            android:textColor="@color/purple_500"
             android:paddingStart="@dimen/padText"
             android:paddingTop="@dimen/padText"
             android:paddingBottom="@dimen/padText"
@@ -120,6 +127,7 @@
         android:background="@drawable/bg_et"
         android:orientation="vertical">
         <Spinner
+            android:textColor="@color/purple_500"
             android:id="@+id/Status"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -141,8 +149,15 @@
         android:text="cari"
         android:textSize="20sp"
         />
-
-
-
+        <Button
+            android:id="@+id/Logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/elemenY"
+            android:layout_marginLeft="@dimen/elemenX"
+            android:layout_marginRight="@dimen/elemenX"
+            android:text="Logout"
+            android:textSize="20sp"
+            />
     </LinearLayout>
 </LinearLayout>

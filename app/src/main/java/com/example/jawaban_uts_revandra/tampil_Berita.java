@@ -1,11 +1,15 @@
 package com.example.jawaban_uts_revandra;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -16,6 +20,8 @@ public class tampil_Berita extends AppCompatActivity {
     private RecyclerView rvBerita;
     private ArrayList<Berita> listBerita = new ArrayList<>();
     private BeritaAdapter beritaAdapter;
+    Drawable bgBaru;
+    TextView judul;
 
 
     @Override
@@ -23,6 +29,27 @@ public class tampil_Berita extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tampil_berita);
         rvBerita = findViewById(R.id.rvBerita);
+        judul = findViewById(R.id.JudulPage);
+        LinearLayout bg = findViewById(R.id.background);
+        if(CariBerita.preferensi.equals("Pariwisata")){
+        bgBaru = ContextCompat.getDrawable(bg.getContext(), R.drawable.bg1);
+        judul.setTextColor(getResources().getColor(R.color.text));}
+        else if(CariBerita.preferensi.equals("Sport")){
+            bgBaru = ContextCompat.getDrawable(bg.getContext(), R.drawable.bg2);
+            judul.setTextColor(getResources().getColor(R.color.white));}
+        else if(CariBerita.preferensi.equals("Politics")){
+            bgBaru = ContextCompat.getDrawable(bg.getContext(), R.drawable.bg3);
+            judul.setTextColor(getResources().getColor(R.color.text));
+        }
+        else if(CariBerita.preferensi.equals("Entertainment")){
+            bgBaru = ContextCompat.getDrawable(bg.getContext(), R.drawable.bg6);
+            judul.setTextColor(getResources().getColor(R.color.white));}
+        else if(CariBerita.preferensi.equals("Crime")){
+            bgBaru = ContextCompat.getDrawable(bg.getContext(), R.drawable.bg5);
+            judul.setTextColor(getResources().getColor(R.color.white));}
+        bg.setBackground(bgBaru);
+
+
 
 
 
@@ -71,7 +98,7 @@ public class tampil_Berita extends AppCompatActivity {
                 listBerita.add(new Berita("Tentang Dirimu", "14 Oktober 2022","Entertainment", R.drawable.jamrud, getString(R.string.jamrud)));
                 listBerita.add(new Berita("Cinta Alesha", "12 September 2022","Entertainment", R.drawable.alesha, getString(R.string.alesha)));
             }
-            else if(umur >= 15){listBerita.add(new Berita("Lesti Kejora", "14 Oktober 2022","Entertainment", R.drawable.lesti, getString(R.string.lesti)));}
+            if(umur >= 15){listBerita.add(new Berita("Lesti Kejora", "14 Oktober 2022","Entertainment", R.drawable.lesti, getString(R.string.lesti)));}
             listBerita.add(new Berita("AMI Award", "14 Oktober 2022","Entertainment", R.drawable.ded, getString(R.string.ded)));
         }
         else if (pref.equals("Crime")){
