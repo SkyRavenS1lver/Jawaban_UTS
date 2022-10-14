@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -149,15 +149,22 @@
         android:text="cari"
         android:textSize="20sp"
         />
-        <Button
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/Logout"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/elemenY"
-            android:layout_marginLeft="@dimen/elemenX"
-            android:layout_marginRight="@dimen/elemenX"
-            android:text="Logout"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+
+
+            android:backgroundTint="@color/white"
+            android:src="@drawable/ic_baseline_power_settings_new_24"
             android:textSize="20sp"
-            />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:maxImageSize="50dp" />
     </LinearLayout>
-</LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

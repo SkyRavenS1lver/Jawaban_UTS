@@ -16,6 +16,8 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
@@ -30,7 +32,7 @@ public class CariBerita extends AppCompatActivity {
     public static int umur;
     public static String preferensi;
     LinearLayout UMR;
-    Button logout;
+    FloatingActionButton logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
