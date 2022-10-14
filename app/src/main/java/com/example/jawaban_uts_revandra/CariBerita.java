@@ -10,24 +10,33 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 public class CariBerita extends AppCompatActivity {
     Spinner spinnerText;
-    String mSpinnerText;
+//    String mSpinnerText;
     EditText tanggal;
+    TextView umurTGL;
     Button cari;
     public static int umur;
     public static String preferensi;
+    LinearLayout UMR;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cari_berita);
         cari = findViewById(R.id.cari);
+        umurTGL = findViewById(R.id.Umur);
+        UMR = findViewById(R.id.UMR);
+        UMR.setVisibility(View.INVISIBLE);
+
+
 
         spinnerText = findViewById(R.id.Status);
 
@@ -80,6 +89,8 @@ public class CariBerita extends AppCompatActivity {
         if (month > currentDate.get(Calendar.MONTH) || (month == currentDate.get(Calendar.MONTH) &&
                 day > currentDate.get(Calendar.DAY_OF_MONTH)))
         {umur--;}
+        UMR.setVisibility(View.VISIBLE);
+        umurTGL.setText(umur+" Tahun");
         tanggal.setText(dateMessage);
     }
     public void cari_berita(){

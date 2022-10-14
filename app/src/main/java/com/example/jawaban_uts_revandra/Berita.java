@@ -5,7 +5,7 @@ import java.util.Date;
 public class Berita {
     String judul;
     String content;
-    int min_age;
+
     String rilis;
     int picture;
     String category;
@@ -18,13 +18,6 @@ public class Berita {
         this.content = content;
     }
 
-    public int getMin_age() {
-        return min_age;
-    }
-
-    public void setMin_age(int min_age) {
-        this.min_age = min_age;
-    }
 
     public String getRilis() {
         return rilis;
@@ -60,7 +53,6 @@ public class Berita {
 
 
     public Berita(String judul,
-            int min_age,
             String rilis,
             String category,
             int picture,
@@ -68,7 +60,6 @@ public class Berita {
     {
         this.judul = judul;
         this.content = content;
-        this.min_age = min_age;
         this.rilis = rilis;
         this.category = category;
         this.picture = picture;}

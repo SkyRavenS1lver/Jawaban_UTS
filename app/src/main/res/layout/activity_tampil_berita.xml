@@ -7,12 +7,16 @@
     tools:context=".tampil_Berita"
     android:orientation="vertical">
     <TextView
+        android:id="@+id/JudulPage"
         android:layout_width="wrap_content"
         android:layout_gravity="center"
         android:layout_height="wrap_content"
-        android:text="Berita Terkini"
+        android:textStyle=""
+        android:text="Berita Terkini\nUntuk Anda"
+        android:gravity="center"
         android:layout_marginTop="25dp"
-        android:textSize="50sp"
+        android:textSize="35sp"
+        android:layout_marginBottom="25dp"
         />
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvBerita"

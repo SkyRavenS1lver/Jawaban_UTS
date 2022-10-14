@@ -6,68 +6,105 @@
     android:layout_height="match_parent"
     tools:context=".CariBerita"
     android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/bghp"
+        android:layout_margin="30dp"
+        >
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:gravity="center"
-        android:text="Masukkan\n Data Diri Anda"
+        android:text="Cari Berita"
         android:textAlignment="center"
-        android:textSize="40sp" />
+        android:layout_marginTop="50dp"
+        android:textSize="40sp"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/elemenY"
-        android:layout_marginLeft="@dimen/elemenX"
-        android:layout_marginRight="@dimen/elemenX"
-        android:orientation="vertical">
+        android:orientation="horizontal"
+        android:layout_margin="25dp"
+        android:padding="10dp">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:editable="false"
             android:background="@android:color/transparent"
-            android:text="Masukkan Tanggal Lahir"
-            android:paddingStart="@dimen/padText"
-            android:paddingTop="@dimen/padText"
-            android:paddingBottom="@dimen/padText"
+            android:text="Tanggal Lahir:"
             android:textSize="20sp"
-            tools:ignore="Deprecated,TextFields" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/elemenY"
-        android:layout_marginLeft="@dimen/elemenX"
-        android:layout_marginRight="@dimen/elemenX"
-        android:background="@drawable/bg_et"
-        android:orientation="vertical">
-        <EditText
-            android:id="@+id/Date"
+            tools:ignore="Deprecated,TextFields"
+            android:layout_weight="1"/>
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:editable="false"
-            android:hint="Tanggal Lahir"
-            android:background="@android:color/transparent"
-            android:inputType="none"
-            android:paddingStart="@dimen/padText"
-            android:paddingTop="@dimen/padText"
-            android:paddingBottom="@dimen/padText"
-            android:textSize="20sp"
-            tools:ignore="Deprecated,TextFields" />
+            android:background="@drawable/bglain"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/Date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:hint="Tanggal Lahir"
+                android:background="@android:color/transparent"
+                android:inputType="none"
+                android:padding="3dp"
+                android:paddingStart="5dp"
+                android:textSize="20sp"
+                tools:ignore="Deprecated,TextFields" />
+        </LinearLayout>
     </LinearLayout>
+        <LinearLayout
+            android:id="@+id/UMR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:padding="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:background="@android:color/transparent"
+                android:text="Umur Anda:"
+                android:textSize="20sp"
+                tools:ignore="Deprecated,TextFields"
+                android:layout_weight="1"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bglain"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/Umur"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Umur Anda"
+                    android:background="@android:color/transparent"
+                    android:padding="3dp"
+                    android:paddingStart="5dp"
+                    android:textSize="20sp"
+                    tools:ignore="Deprecated,TextFields" />
+            </LinearLayout>
+        </LinearLayout>
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/elemenY"
-        android:layout_marginLeft="@dimen/elemenX"
+        android:layout_marginLeft="25dp"
         android:layout_marginRight="@dimen/elemenX"
         android:orientation="vertical">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
-            android:text="Pilih preferensi Berita"
+            android:text="Pilih preferensi Berita:"
             android:paddingStart="@dimen/padText"
             android:paddingTop="@dimen/padText"
             android:paddingBottom="@dimen/padText"
@@ -107,5 +144,5 @@
 
 
 
-
+    </LinearLayout>
 </LinearLayout>
