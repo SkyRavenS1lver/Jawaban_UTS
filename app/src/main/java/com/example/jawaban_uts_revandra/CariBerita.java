@@ -20,6 +20,8 @@ import java.util.GregorianCalendar;
 public class CariBerita extends AppCompatActivity {
     Spinner spinnerText;
 //    String mSpinnerText;
+    public static String dateMessage;
+    public static String status;
     EditText tanggal;
     TextView umurTGL;
     Button cari;
@@ -34,12 +36,7 @@ public class CariBerita extends AppCompatActivity {
         cari = findViewById(R.id.cari);
         umurTGL = findViewById(R.id.Umur);
         UMR = findViewById(R.id.UMR);
-        UMR.setVisibility(View.INVISIBLE);
-
-
-
         spinnerText = findViewById(R.id.Status);
-
         tanggal = findViewById(R.id.Date);
         tanggal.setKeyListener(null);
 
@@ -73,6 +70,8 @@ public class CariBerita extends AppCompatActivity {
                 showDataPicker();
             }
         });
+        if(CariBerita.status != "yes"){UMR.setVisibility(View.INVISIBLE);}
+        else {tanggal.setText(dateMessage); umurTGL.setText(umur+" Tahun");}
 
     }
     public void showDataPicker(){
@@ -83,13 +82,14 @@ public class CariBerita extends AppCompatActivity {
         String day_string = Integer.toString(day);
         String month_string = Integer.toString(month+1);
         String year_string = Integer.toString(year);
-        String dateMessage = day_string + "-" + month_string + "-" + year_string;
+        dateMessage = day_string + "-" + month_string + "-" + year_string;
         Calendar currentDate = new GregorianCalendar();
         umur = currentDate.get(Calendar.YEAR) - year;
         if (month > currentDate.get(Calendar.MONTH) || (month == currentDate.get(Calendar.MONTH) &&
                 day > currentDate.get(Calendar.DAY_OF_MONTH)))
         {umur--;}
         UMR.setVisibility(View.VISIBLE);
+        CariBerita.status = "yes";
         umurTGL.setText(umur+" Tahun");
         tanggal.setText(dateMessage);
     }

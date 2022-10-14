@@ -51,16 +51,14 @@ public class tampil_Berita extends AppCompatActivity {
             listBerita.add(new Berita("Bali Safari", "25 Januari 2022","Pariwisata", R.drawable.safari, getString(R.string.safari)));
         }
         else if (pref.equals("Sport")){
-            if (umur >= 18){listBerita.add(new Berita("Kanjuruhan", "14 Oktober 2022","Sport", R.drawable.kanjuruhan, getString(R.string.kanjuruhan)));}
+            if (umur >= 17){listBerita.add(new Berita("Kanjuruhan", "14 Oktober 2022","Sport", R.drawable.kanjuruhan, getString(R.string.kanjuruhan)));}
             listBerita.add(new Berita("Alexis Expargaro", "14 Oktober 2022","Sport", R.drawable.motogp, getString(R.string.motogp)));
             listBerita.add(new Berita("Bulu Tangkis", "14 Oktober 2022","Sport", R.drawable.bulu, getString(R.string.bulutangkis)));
             listBerita.add(new Berita("Hasil TGIPF", "14 Oktober 2022","Sport", R.drawable.tgpif, getString(R.string.TGPIF)));
             listBerita.add(new Berita("Rank FIFA Timnas", "14 Oktober 2022","Sport", R.drawable.rank, getString(R.string.rank)));
-
-
         }
         else if (pref.equals("Politics")) {
-            if (umur >= 18) {
+            if (umur >= 17) {
                 listBerita.add(new Berita("NasDem Kawal Jokowi", "15 Oktober 2022", "Politics", R.drawable.nasdem, getString(R.string.nasdem)));
                 listBerita.add(new Berita("18 Partai Lolos", "14 Oktober 2022", "Politics", R.drawable.partai, getString(R.string.partai)));
                 listBerita.add(new Berita("PDIP no Premanisme", "14 Oktober 2021","Politics", R.drawable.premanisme, getString(R.string.premanisme)));
@@ -70,9 +68,13 @@ public class tampil_Berita extends AppCompatActivity {
         }
         else if (pref.equals("Entertainment")){
             listBerita.add(new Berita("Yogyakarta", "11-10-2022","Entertainment", R.drawable.yogya, getString(R.string.yogyakarta)));
+            listBerita.add(new Berita("Yogyakarta", "11-10-2022","Entertainment", R.drawable.yogya, getString(R.string.yogyakarta)));
+            listBerita.add(new Berita("Yogyakarta", "11-10-2022","Entertainment", R.drawable.yogya, getString(R.string.yogyakarta)));
+            listBerita.add(new Berita("Yogyakarta", "11-10-2022","Entertainment", R.drawable.yogya, getString(R.string.yogyakarta)));
+            listBerita.add(new Berita("Yogyakarta", "11-10-2022","Entertainment", R.drawable.yogya, getString(R.string.yogyakarta)));
         }
         else if (pref.equals("Crime")){
-            if(umur < 18){TextView a = findViewById(R.id.JudulPage);a.setText("Maaf Tidak Ada Berita Terbaru!");}
+            if(umur < 17){TextView a = findViewById(R.id.JudulPage);a.setText("Maaf Tidak Ada Berita Terbaru");}
             else {
                 listBerita.add(new Berita("Yogyakarta", "11-10-2022", "Crime", R.drawable.yogya, getString(R.string.yogyakarta)));
             }}}
