@@ -67,15 +67,20 @@ public class tampil_Berita extends AppCompatActivity {
             listBerita.add(new Berita("Bagi Sepedah", "21 Desember 2021", "Politics", R.drawable.sepedah, getString(R.string.sepedah)));
         }
         else if (pref.equals("Entertainment")){
-            listBerita.add(new Berita("Yogyakarta", "11-10-2022","Entertainment", R.drawable.yogya, getString(R.string.yogyakarta)));
-            listBerita.add(new Berita("Yogyakarta", "11-10-2022","Entertainment", R.drawable.yogya, getString(R.string.yogyakarta)));
-            listBerita.add(new Berita("Yogyakarta", "11-10-2022","Entertainment", R.drawable.yogya, getString(R.string.yogyakarta)));
-            listBerita.add(new Berita("Yogyakarta", "11-10-2022","Entertainment", R.drawable.yogya, getString(R.string.yogyakarta)));
-            listBerita.add(new Berita("Yogyakarta", "11-10-2022","Entertainment", R.drawable.yogya, getString(R.string.yogyakarta)));
+            if(umur >= 25){listBerita.add(new Berita("Ikatan Cinta", "15 Oktober 2022","Entertainment", R.drawable.ikatan, getString(R.string.ikatan)));
+                listBerita.add(new Berita("Tentang Dirimu", "14 Oktober 2022","Entertainment", R.drawable.jamrud, getString(R.string.jamrud)));
+                listBerita.add(new Berita("Cinta Alesha", "12 September 2022","Entertainment", R.drawable.alesha, getString(R.string.alesha)));
+            }
+            else if(umur >= 15){listBerita.add(new Berita("Lesti Kejora", "14 Oktober 2022","Entertainment", R.drawable.lesti, getString(R.string.lesti)));}
+            listBerita.add(new Berita("AMI Award", "14 Oktober 2022","Entertainment", R.drawable.ded, getString(R.string.ded)));
         }
         else if (pref.equals("Crime")){
             if(umur < 17){TextView a = findViewById(R.id.JudulPage);a.setText("Maaf Tidak Ada Berita Terbaru");}
             else {
-                listBerita.add(new Berita("Yogyakarta", "11-10-2022", "Crime", R.drawable.yogya, getString(R.string.yogyakarta)));
+                listBerita.add(new Berita("WNA Kanada", "24 September 2022", "Crime", R.drawable.kanada, getString(R.string.kanada)));
+                listBerita.add(new Berita("Bencana Seminyak", "29 September 2022", "Crime", R.drawable.tenggelam, getString(R.string.tenggelam)));
+                listBerita.add(new Berita("WN Selandia", "14 Oktober 2022", "Crime", R.drawable.bom, getString(R.string.bom)));
+                listBerita.add(new Berita("Kasus Penggelapan", "11 Oktober 2022", "Crime", R.drawable.peradilan, getString(R.string.peradilan)));
+                listBerita.add(new Berita("TNI Pukul Security", "10 Oktober 2022", "Crime", R.drawable.tni, getString(R.string.tni)));
             }}}
 }
