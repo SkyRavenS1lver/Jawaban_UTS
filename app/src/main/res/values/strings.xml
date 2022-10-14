@@ -2,10 +2,13 @@
     <string name="app_name">Berita</string>
     <string name="formatter" formatted="true">%02d</string>
     <string-array name="statuses">
-        <item>Anak-anak</item>
+        <item>Pariwisata</item>
         <item>Sport</item>
         <item>Politics</item>
         <item>Entertainment</item>
         <item>Crime</item>
     </string-array>
+    <string name="yogyakarta">Yogyakarta (often called “Jogja”) is a city on the Indonesian island of Java known for its traditional arts and cultural heritage. Its ornate 18th-century royal complex, or kraton, encompasses the still-inhabited Sultan’s Palace. Also within the kraton are numerous open-air pavilions that host classical Javanese dance shows and concerts of gamelan music, characterized by gongs, chimes and plucked string instruments.</string>
+    <string name="lawangSewu">Lawang Sewu is a former office building in Semarang, Central Java, Indonesia. It was a head office of the Dutch East Indies Railway Co. and is owned by the national railway company Kereta Api Indonesia.</string>
+
 </resources>

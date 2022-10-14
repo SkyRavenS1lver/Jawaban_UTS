@@ -10,11 +10,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:gravity="center"
-        android:text="Masukkan Berita yang diinginkan"
+        android:text="Masukkan\n Data Diri Anda"
         android:textAlignment="center"
-        android:textSize="25sp"/>
+        android:textSize="40sp" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

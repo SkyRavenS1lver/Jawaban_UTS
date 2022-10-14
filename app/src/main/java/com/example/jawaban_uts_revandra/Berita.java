@@ -3,11 +3,10 @@ package com.example.jawaban_uts_revandra;
 import java.util.Date;
 
 public class Berita {
-    public static final int[] kumpulanGambar = {R.drawable.kanjuruhan};
     String judul;
     String content;
     int min_age;
-    Date rilis;
+    String rilis;
     int picture;
     String category;
 
@@ -27,11 +26,11 @@ public class Berita {
         this.min_age = min_age;
     }
 
-    public Date getRilis() {
+    public String getRilis() {
         return rilis;
     }
 
-    public void setRilis(Date rilis) {
+    public void setRilis(String rilis) {
         this.rilis = rilis;
     }
 
@@ -61,11 +60,11 @@ public class Berita {
 
 
     public Berita(String judul,
-            String content,
             int min_age,
-            Date rilis,
+            String rilis,
             String category,
-            int picture)
+            int picture,
+                  String content)
     {
         this.judul = judul;
         this.content = content;

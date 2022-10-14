@@ -12,11 +12,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
 public class CariBerita extends AppCompatActivity {
     Spinner spinnerText;
     String mSpinnerText;
     EditText tanggal;
     Button cari;
+    public static int umur;
+    public static String preferensi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,14 +75,19 @@ public class CariBerita extends AppCompatActivity {
         String month_string = Integer.toString(month+1);
         String year_string = Integer.toString(year);
         String dateMessage = day_string + "-" + month_string + "-" + year_string;
+        Calendar currentDate = new GregorianCalendar();
+        umur = currentDate.get(Calendar.YEAR) - year;
+        if (month > currentDate.get(Calendar.MONTH) || (month == currentDate.get(Calendar.MONTH) &&
+                day > currentDate.get(Calendar.DAY_OF_MONTH)))
+        {umur--;}
         tanggal.setText(dateMessage);
     }
     public void cari_berita(){
-        String umur = tanggal.getText().toString();
-        String preferensi = spinnerText.getSelectedItem().toString();
+//        String preferensi = spinnerText.getSelectedItem().toString();
+        preferensi = spinnerText.getSelectedItem().toString();
         Intent tampilkan = new Intent(CariBerita.this, tampil_Berita.class);
-        tampilkan.putExtra("Umur", umur);
-        tampilkan.putExtra("Preferensi",preferensi);
+//        tampilkan.putExtra("Umur",umur);
+//        tampilkan.putExtra("Preferensi",preferensi);
         startActivity(tampilkan);
     }
 
